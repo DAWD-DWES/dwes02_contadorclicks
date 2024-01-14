@@ -5,6 +5,7 @@ if (!isset($_SESSION['numClicks'])) {
 } else {
     $numClicks = ++$_SESSION['numClicks'];
 }
+
 ?>
 <!DOCTYPE html>
 <html>
