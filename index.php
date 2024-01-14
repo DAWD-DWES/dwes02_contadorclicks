@@ -1,10 +1,9 @@
 <?php
 session_start();
-if (empty($_POST)) {
+if (!isset($_SESSION['numClicks'])) {
     $numClicks = $_SESSION['numClicks'] = 0;
-}
-else {
-$numClicks = ++$_SESSION['numClicks'];
+} else {
+    $numClicks = ++$_SESSION['numClicks'];
 }
 ?>
 <!DOCTYPE html>
