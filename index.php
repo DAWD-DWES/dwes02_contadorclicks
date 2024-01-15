@@ -1,11 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['numClicks'])) {
-    $numClicks = $_SESSION['numClicks'] = 0;
-} else {
+if (isset($_SESSION['numClicks'])) {
     $numClicks = ++$_SESSION['numClicks'];
+} else {
+    $numClicks = $_SESSION['numClicks'] = 0;
 }
-
 ?>
 <!DOCTYPE html>
 <html>
